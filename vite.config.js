@@ -1,6 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()]
+  plugins: [react()],
+  build: {
+    outDir: 'dist',   // output folder for production build
+  },
+  server: {
+    port: 5173,       // local dev server port (optional)
+    open: true,       // automatically opens browser
+  },
 })
